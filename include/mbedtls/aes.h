@@ -144,11 +144,6 @@ int mbedtls_aes_crypt_ecb( mbedtls_aes_context *ctx,
  *       If you need to retain the contents of the IV, you should 
  *       either save it manually or use the cipher module instead.
  *
- * For TZ, the size of the scatter/gather list representing the
- * data buffer is limited to 128 entries, and the size of each
- * entry is limited to 64KB (fragments larger than 64KB are
- * broken into fragments <= 64KB).For Arm CryptoCell-3xx, the
- * buffer must be contiguous and limited to 64KB.
  * \note The output buffer may be NULL for MAC operations.
  *
  * \param ctx      The AES context to encrypt/decrypt.
